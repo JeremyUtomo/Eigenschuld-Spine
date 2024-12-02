@@ -1,0 +1,29 @@
+<app-caregiver-navbar></app-caregiver-navbar>
+<section class="flex items-center w-full flex-col mt-5">
+  <article class="w-full flex justify-center items-center">
+    <h1 class="text-3xl" i18n="caregiver.edit-questions.title">Vragen aanpassen</h1>
+  </article>
+  <article class="w-8/12 items-start space-y-2">
+    <div  *ngFor="let question of questions"  class="flex flex-row h-15">
+      <article class="flex flex-row items-center justify-center h-full space-x-3">
+        <section class="flex flex-col h-full">
+          <button (click)="moveQuestionUp(this.questions.indexOf(question))">▲</button>
+          <p>{{questions.indexOf(question)+1}}</p>
+          <button (click)="moveQuestionDown(this.questions.indexOf(question))">▼</button>
+        </section>
+        <section class="flex flex-row items-center h-full">
+          <p class="">{{ question.question }}</p>
+          <button (click)="removeQuestion(question.id)" class="">
+            <img src="../../../assets/images/trashcan.png" class="h-4 ml-4" />
+          </button>
+        </section>
+      </article>
+
+    </div>
+
+    <div class="w-full flex-col mt-10 md:flex-row">
+      <input type="text" placeholder="Vul hier een nieuwe vraag in..." class="form-control border-solid border border-black rounded-l w-full md:w-9/12 flex-row" [(ngModel)]="newQuestion" id="newQuestionInput">
+      <button class="w-full  md:w-3/12 h-full rounded-r bg-primaryBlue text-white pt-0.5 pb-0.5" (click)="addQuestion()">Vraag toevoegen</button>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,27 @@
+<div class="flex items-center justify-center h-screen">
+    <div class="card1 bg-[#202859] rotate-18">
+        <div class="card2 bg-[#6D7FAC] py-24 px-14 rotate-348">
+            <div class="bg-white shadow-3xl p-3 rotate-354">
+                <h1 class="text-[#6D7FAC] font-bold text-4xl my-8 text-center" i18n="login.title|EigenSchuld titel">Eigen Schuld</h1>
+                <form class="w-full max-w-sm m-5 ">
+
+                    <div class="form-group">
+                        <input class="form-control border-solid border border-black rounded m-2 p-2 w-64"
+                               type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control border-solid border border-black rounded m-2 p-2 w-64"
+                               type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password" placeholder="Password" >
+                    </div>
+
+                    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+                    <button class="rounded bg-[#6D7FAC] text-white m-2 p-2 mt-40 w-64 button"
+                            type="login"  (click)="save()" i18n="login.button|inlogbutton">Login</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

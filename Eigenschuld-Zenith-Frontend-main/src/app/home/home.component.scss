@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    width: 100%;
+}
+
+.start-circle{
+    margin-left: 2.7px;
+    width: 50px;
+    height: 50px;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: #202859;
+    border: 6px solid black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.start-text{
+    background-color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    margin-left: 3vw;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.progress-box {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 7vh;
+}
+
+.circle {
+    margin-left: 2.7px;
+    width: 50px;
+    height: 50px;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: white;
+    border: 6px solid #202859;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-completed {
+    margin-left: 2.7px;
+    width: 50px;
+    height: 50px;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: #44A047;
+    border: 6px solid #202859;
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+}
+
+.circle-completed::after {
+    content: '✓';
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line-vertical {
+    width: 1.5vw;
+    min-width: 20px;
+    background-color: #202859;
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    bottom: -130px;
+    z-index: 0;
+}
+
+.line-horizontal {
+    width: 100px;
+    height: 5px;
+    background-color: #202859;
+}
+
+.progress-text {
+    background-color: #fff;
+    width: 12vw;
+    height: 12vh;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 800px){
+    .progress-text {
+        width: 20vw;
+        height: 15vh;
+        font-size: 0.8rem;
+    }
+}

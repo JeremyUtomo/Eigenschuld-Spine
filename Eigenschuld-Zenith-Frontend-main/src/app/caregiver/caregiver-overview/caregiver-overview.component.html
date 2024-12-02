@@ -1,0 +1,32 @@
+<app-caregiver-navbar></app-caregiver-navbar>
+<div class="max-w-4xl mx-auto p-4 md:max-w-750">
+    <h1 class="text-4xl font-bold mb-4 text-center">Cliënten</h1>
+    <div class="flex justify-center mb-4">
+        <input type="text" placeholder="Invullen email" class="border-2 border-gray-300 rounded-md px-2 py-1 w-full md:w-64" [(ngModel)]="email">
+        <button class="bg-primaryBlue text-white rounded-md px-2 py-1 ml-2" (click)="sendInvite()">Sturen</button>
+    </div>
+    <div *ngIf="errorMessage" class="error-message break-words text-red-500 m-2 p-2 max-w-full md:max-w-64">{{ errorMessage }}</div>
+
+    <div class="flex flex-col shadow-lg rounded-2xl" *ngFor="let client of clients">
+        <div class="flex justify-between items-center p-4">
+            <div>
+                <p class="font-bold text-secondaryDarkBlue text-xl">{{client.firstname}} {{client.infix}} {{client.lastname}}</p>
+                <p *ngIf="client.lastlogin != '01-01-1970'; else neverLoggedIn">Laatst ingelogd: {{client.lastlogin}}</p>
+            </div>
+
+            <div class="flex space-x-2">
+                <section class="flex flex-col" *ngFor="let exercise of client.exerciseProgressIds; let i = index">
+                    <button [ngClass]="{'bg-secondaryBlue': exercise.isDone, 'bg-primaryBlue': !exercise.isDone}" class="text-white rounded-full px-4 py-2 " (click)="openExercise(i, client.userId)">{{exercise.name}}</button>
+                    <article *ngIf="i == 1 || i == 2" class="mt-2">
+                        <button class="text-white rounded-full px-4 py-2 bg-primaryBlue" (click)="openEdit(i, client.userId)">edit</button>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #neverLoggedIn>
+    <p>Nooit ingelogd</p>
+</ng-template>

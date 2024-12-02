@@ -1,0 +1,12 @@
+<body>
+<div class="navbar"></div>
+<div class="container">
+    <div class="bar">
+        <h1>Domein</h1>
+        <ul>
+            <li *ngFor="let domain of domains">{{ domain.name }}</li>
+        </ul>
+        <button class="add-domain-btn" (click)="addNewDomain()">Toevoegen domein</button>
+    </div>
+</div>
+</body>

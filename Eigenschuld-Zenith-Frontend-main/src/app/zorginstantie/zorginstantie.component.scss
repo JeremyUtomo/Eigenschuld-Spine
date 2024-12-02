@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 1000px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .mr-24,
+    .ml-24 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+

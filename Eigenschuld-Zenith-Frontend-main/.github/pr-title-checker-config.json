@@ -1,0 +1,27 @@
+{
+  "LABEL": {
+    "name": "Title needs formatting",
+    "color": "EEEEEE"
+  },
+  "CHECKS": {
+    "prefixes": [
+      "[Bugfix]: ",
+      "[Feature]: ",
+      "[Docs]: ",
+      "[Hotfix]: ",
+      "[Bump]: ",
+      "[Chore]: ",
+      "[Refactor]: ",
+      "[Test]: ",
+      "[Release]: "
+    ],
+    "regexp": "docs\\(v[0-9]\\): ",
+    "regexpFlags": "i",
+    "ignoreLabels": []
+  },
+  "MESSAGES": {
+    "success": "All OK",
+    "failure": "Failing CI test",
+    "notice": ""
+  }
+}

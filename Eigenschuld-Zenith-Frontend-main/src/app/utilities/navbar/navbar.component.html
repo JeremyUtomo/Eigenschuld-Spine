@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+        <p>EigenSchuld</p>
+    </div>
+    <div class="navbar-toggle" (click)="toggleMenu()">
+        <span class="navbar-icon">&#9776;</span>
+    </div>
+    <ul class="navbar-menu" [ngClass]="{ 'active': menuOpen }">
+        <li class="navbar-item" (click)="navigateToHome()">Opdrachten</li>
+        <li class="navbar-item" (click)="logout()">Uitloggen</li>
+    </ul>
+</nav>

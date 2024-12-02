@@ -1,0 +1,167 @@
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    justify-content: center;
+}
+
+.involved-bar {
+    height: 100vh;
+    color: white;
+    background-color: #202859;
+    align-items: center;
+    text-align: center;
+    width: 15vw;
+    margin-left: 10vw;
+    padding: 1vw;
+    margin-right: auto;
+}
+
+.mobile-involved-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: #202859;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    height: 25vh;
+    overflow-y: auto;
+}
+
+
+.involved-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.involved-button {
+    margin: 0 0.25rem;
+}
+
+.involved {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6D7FAC;
+}
+
+.name {
+    width: 60%;
+    text-align: left;
+}
+
+.addSlice {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.add-slice-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    gap: 0.5rem;
+    margin-left: 2.5vw;
+}
+
+.add-button {
+    border: none;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.involved-input {
+    height: 35px;
+    border: none;
+    margin-right: 10px;
+    width: 85%;
+}
+
+.involved-button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 70vh;
+    max-width: 550px;
+}
+
+.context-chart {
+    text-align: center;
+    width: 70%;
+}
+
+.next-button {
+    background-color: #202859;
+    border-radius: 8%;
+    border: none;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 1vw;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-button img {
+    width: 60px;
+    height: 80px;
+}
+
+.mobile-next-button {
+    background-color: #202859;
+    border: none;
+    margin-top: 1.5vh;
+}
+
+.mobile-next-button img {
+    width: 30px;
+    height: 40px;
+}
+
+@media (max-width: 1165px) {
+    .involved-bar {
+        display: none;
+    }
+    .next-button {
+        display: none;
+    }
+    .description {
+        display: none;
+    }
+    .chart {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 1166px) {
+    .mobile-involved-bar {
+        display: none;
+    }
+}

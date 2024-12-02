@@ -1,0 +1,38 @@
+.navbar {
+    background-color: #6D7FAC;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .chart-feeling, .chart-sense {
+    margin: 10px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }

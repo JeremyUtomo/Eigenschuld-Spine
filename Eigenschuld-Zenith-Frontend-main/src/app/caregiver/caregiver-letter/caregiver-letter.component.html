@@ -1,0 +1,19 @@
+<app-navbar />
+
+<main class="flex items-center justify-start flex-col w-full" style="height: 94vh;">
+  <article>
+    <h1 class="text-6xl font-bold mt-10">Brief</h1>
+  </article>
+
+  <section
+    class="flex items-center flex-col mt-6 bg-primaryBlue lg:h-3/5 lg:w-8/12 md:h-4/5 md:w-8/12 h-4/5 w-10/12 p-4 pb-0">
+    <article class="text-white text-xl pt-3 pb-7">
+      <p>
+        Dit is de brief van {{ clientName }}
+      </p>
+    </article>
+    <p class="w-full h-4/5 p-1 outline-none resize-none bg-white overflow-auto">
+      {{letter}}
+    </p>
+  </section>
+</main>S

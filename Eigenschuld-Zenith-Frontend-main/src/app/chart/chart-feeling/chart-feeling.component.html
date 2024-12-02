@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="involved-bar">
+        <h1>Betrokkenen</h1>
+        <div *ngFor="let slice of chartData.labels; let i = index" class="involved">
+            <p class="name">{{ slice }}
+            <p>
+                <button class="involved-button" (click)="updateSlice(i, '-')"
+                    *ngIf="slice !== 'Overig percentage'">-</button>
+            <p>{{ chartData.datasets[0].data[i] }}</p>
+            <button class="involved-button" (click)="updateSlice(i, '+')"
+                *ngIf="slice !== 'Overig percentage'">+</button>
+            <button class="involved-button" (click)="removeSlice(i)" *ngIf="slice !== 'Overig percentage'">X</button>
+        </div>
+        <div class="addSlice">
+            <input class="involved-input" type="text" [(ngModel)]="newSliceLabel" placeholder="New Slice Label">
+            <button class="add-button" (click)="addSlice()">
+                <img src="../../../assets/add.png">
+            </button>
+        </div>
+    </div>
+    <div class="chart">
+        <div class="context-chart">
+            <h1>Gevoel</h1>
+            <h3 class="description">Gebruik bij deze opdracht je gevoel om te bepalen hoe groot de verantwoordelijkheid is voor elke
+                betrokkene.</h3>
+        </div>
+        <canvas id="chart" #chartFeeling></canvas>
+    </div>
+    <button class="next-button" (click)="save()">
+        <img src="../../../assets/chevron-right.png" alt="Next">
+    </button>
+</div>
+<div class="mobile-involved-bar">
+    <div class="add-slice-mobile">
+        <input id="involved-input-mobile" class="involved-input" type="text" [(ngModel)]="newSliceLabel" placeholder="New Slice Label">
+        <button id="add-button-mobile" class="add-button" (click)="addSlice()">
+            <img src="../../../assets/add.png" alt="Add">
+        </button>
+    </div>
+    <ng-container *ngFor="let slice of chartData.labels; let i = index">
+        <div class="involved-row" *ngIf="slice !== 'Overig percentage'">
+            <p class="name">{{ slice }}</p>
+            <button id="decrease-slice" class="involved-button" (click)="updateSlice(i, '-')">-</button>
+            <p>{{ chartData.datasets[0].data[i] }}</p>
+            <button id="increase-slice" class="involved-button" (click)="updateSlice(i, '+')">+</button>
+            <button id="remove-slice" class="involved-button" (click)="removeSlice(i)">X</button>
+        </div>
+    </ng-container>
+    <button class="mobile-next-button" (click)="save()">
+        <img src="../../../assets/chevron-right.png">
+    </button>
+</div>

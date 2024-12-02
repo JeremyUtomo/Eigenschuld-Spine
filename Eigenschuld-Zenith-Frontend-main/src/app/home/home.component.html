@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="main-container">
+    <div class="progress-container">
+        <div *ngFor="let exercise of exercises; let i = index">
+            <div *ngIf="i === 0" class="progress-box">
+                <div class="start-circle"></div>
+                <div class="line-vertical"></div>
+                <div class="start-text">START</div>
+            </div>
+            <div class="progress-box" (click)="navigateTo(routes[i])">
+                <div [ngClass]="{'circle-completed': exercise.isDone, 'circle': !exercise.isDone}"></div>
+                <div class="line-horizontal"></div>
+                <div class="progress-text">
+                    {{ exercise.name }}
+                </div>
+                <div *ngIf="i < exercises.length - 1" class="line-vertical"></div>
+            </div>
+        </div>
+    </div>
+</div>

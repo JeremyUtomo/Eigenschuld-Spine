@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primaryBlue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(109 127 172 / var(--tw-bg-opacity));
+}
+
+.bg-secondaryBlue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(32 40 89 / var(--tw-bg-opacity));
+}

@@ -1,0 +1,15 @@
+<app-navbar />
+
+<main class="flex items-center justify-start flex-col w-full" style="height: 94vh;">
+  <article>
+    <h1 class="text-6xl font-bold mt-10">Brief</h1>
+  </article>
+
+  <section class="flex items-center flex-col mt-6 bg-primaryBlue md:h-3/5 md:w-8/12 p-4 pb-0 w-4/5 h-4/5">
+    <article class="text-white md:text-xl pt-3 pb-7">
+      <p>Schrijf een brief aan jezelf, deze brief begin je met de zin ‘ik ben 0% verantwoordelijk voor het gebeurde trauma omdat…’  </p>
+    </article>
+    <textarea class="w-full h-full p-1 outline-none resize-none" [(ngModel)]="letter">ik ben 0% verantwoordelijk voor het gebeurde trauma omdat…</textarea>
+    <button (click)="save()" class="self-end pt-2 pb-2 pl-4 pr-4 m-2 text-white bg-secondaryDarkBlue rounded-lg">Opslaan</button>
+  </section>
+</main>

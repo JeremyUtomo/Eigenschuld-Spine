@@ -1,0 +1,26 @@
+<div class="text-center m-12">
+    <h1 class="font-bold text-4xl">{{"Spine"}}</h1>
+</div>
+
+<div class="flex justify-center items-center flex-wrap"> <!-- Added flex-wrap -->
+    <div class="flex flex-col items-center mr-24 mb-6"> <!-- Added mb-6 for margin bottom -->
+        <div class="bg-[#202859] rounded-full shadow-3xl max-w-52 m-3 flex justify-center items-center">
+            <img src="../../assets/logos/spine_logo_2.png" class="max-h-52">
+        </div>
+
+        <div class="bg-[#D9D9D9] rounded-2xl shadow-3xl w-96 p-6 m-3">
+            <h2 class="font-bold text-2xl">Statestieken</h2>
+            <p>Aantal clienten: {{"24"}}</p>
+            <p>Aantal geslaagde clienten: {{"11"}}</p>
+            <p>Aantal clienten in het proces: {{"13"}}</p>
+            <p class="font-light text-xs">Dit is een voorbeeld, het kunnen ook andere statestieken zijn</p>
+        </div>
+    </div>
+
+    <div class="bg-[#D9D9D9] rounded-2xl shadow-3xl w-96 p-6 m-3 ml-24">
+        <div class="flex justify-between items-center">
+            <h2 class="font-bold text-2xl">Hulpverleners</h2>
+        </div>
+        <p *ngFor="let hulpverlener of hulpverleners">{{hulpverlener.firstName}} {{hulpverlener.lastName}}</p>
+    </div>
+</div>

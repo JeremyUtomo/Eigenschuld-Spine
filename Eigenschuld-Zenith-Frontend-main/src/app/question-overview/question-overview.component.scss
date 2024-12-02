@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 50px);
+}
+
+.navbar {
+    background-color: #6D7FAC;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bar {
+    color: white;
+    background-color: #202859;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 5vw;
+    width: 12vw;
+    padding: 2vw;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 50px);
+}
+
+.bar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.bar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.bar ul li::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: #F4A090;
+}
+
+.bar ul li:hover::before {
+    background-color: #E76352;
+}
+
+.content {
+    flex: 1;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #F4A090;
+    margin: 20px 0;
+}
+
+.question-number{
+    font-size: 1rem;
+    color: #F4A090;
+}
+
+.question {
+    color: #202859;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.answer {
+    color: black;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.reactions {
+    color: black;
+    width: 100%;
+    font-size: 1.0rem;
+}
+
+.new-reaction textarea {
+    width: 60vw;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.new-reaction button {
+    display: flex;
+    align-content: center;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+    background-color: #E76352;
+    color: #fff;
+    cursor: pointer;
+}
+
+.response-author{
+    color: black;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 800px) {
+    .bar {
+        display: none;
+    }
+
+
+}

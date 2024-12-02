@@ -1,0 +1,40 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.add-domain-form {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #202859;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.add-domain-form label {
+    font-weight: bold;
+}
+
+.add-domain-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-domain-form button[type="submit"] {
+    background-color: #F4A090;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-domain-form button[type="submit"]:hover {
+    background-color: #E76355;
+}

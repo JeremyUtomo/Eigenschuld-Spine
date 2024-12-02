@@ -1,0 +1,17 @@
+[
+    {
+        "progressId": "1",
+        "firstOpen": "true",
+        "name": "Opdracht 1"
+    },
+    {
+        "progressId": "2",
+        "firstOpen": null,
+        "name": "Opdracht 2"
+    },
+    {
+        "progressId": "3",
+        "firstOpen": "true",
+        "name": "Opdracht 3"
+    }
+]

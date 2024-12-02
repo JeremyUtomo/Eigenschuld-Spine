@@ -1,0 +1,15 @@
+<form #domainForm="ngForm" (ngSubmit)="onSubmit(domainForm)" class="add-domain-form">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="logo_location">Logo Location:</label>
+        <input type="text" id="logo_location" name="logo_location" ngModel required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="primary_color_hex">Primary Color Hex:</label>
+        <input type="text" id="primary_color_hex" name="primary_color_hex" ngModel required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

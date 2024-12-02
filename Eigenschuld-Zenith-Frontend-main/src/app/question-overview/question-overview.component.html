@@ -1,0 +1,30 @@
+<app-caregiver-navbar *ngIf="role === 'HULPVERLENER'"></app-caregiver-navbar>
+<app-navbar *ngIf="role === 'CLIENT' "></app-navbar>
+<div class="container">
+    <div class="bar">
+        <h1>Overzicht</h1>
+        <ul>
+            <li *ngFor="let question of questions; let i = index" (click)="scrollToQuestion(i)">
+                Vraag {{ i + 1 }}
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div *ngFor="let question of questions; let i = index" class="question" id="question-{{i}}">
+            <p class="question-number">Vraag {{ i + 1 }}</p>
+            <h3>{{ question.question }}</h3>
+            <div class="answer" *ngIf="question.responses.length > 0">
+                <p>{{ question.responses[0].response }}</p>
+            </div>
+                <div class="new-reaction">
+                    <textarea [(ngModel)]="newResponses[i]" placeholder="Voeg hier een reactie toe"></textarea>
+                    <button (click)="addResponse(question.id, i)">Versturen</button>
+                </div>
+                <div class="reactions" *ngFor="let response of question.responses.slice(1)">
+                    <p class="response-author">{{ response.firstName + " " + response.lastName }}</p>
+                    <p>{{ response.response }}</p>
+                </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
